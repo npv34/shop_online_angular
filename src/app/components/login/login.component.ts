@@ -24,9 +24,10 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.formLogin)
     this.authService.login(this.formLogin.value).subscribe(res => {
-        if (res.status === 'error') {
+        if (res.status == 'error') {
+
+          console.log('3232')
           this.message = res.message;
         } else {
           localStorage.setItem('token', res.data.token)
