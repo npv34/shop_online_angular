@@ -9,10 +9,8 @@ import { SidebarComponent } from './layouts/core/sidebar/sidebar.component';
 import { FooterComponent } from './layouts/core/footer/footer.component';
 import { TopbarComponent } from './layouts/core/topbar/topbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { UserListComponent } from './components/users/user-list/user-list.component';
-import { UserAddComponent } from './components/users/user-add/user-add.component';
-import { UserEditComponent } from './components/users/user-edit/user-edit.component';
-
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +20,12 @@ import { UserEditComponent } from './components/users/user-edit/user-edit.compon
     FooterComponent,
     TopbarComponent,
     DashboardComponent,
-    UserListComponent,
-    UserAddComponent,
-    UserEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

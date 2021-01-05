@@ -29,11 +29,7 @@ const routes: Routes = [
       },
       {
         path: 'users',
-        component: UserListComponent
-      },
-      {
-        path: 'users/add',
-        component: UserAddComponent
+        loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)
       }
     ]
   }
